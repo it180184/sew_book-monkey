@@ -23,7 +23,7 @@ export class BookDetailsComponent implements OnInit {
     });
   }
 
-  getRating(rating: number | undefined): any[] {
+  getRating(rating?: number): any[] {
     return new Array(rating);
   }
 
