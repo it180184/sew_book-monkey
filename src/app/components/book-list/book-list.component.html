@@ -1,3 +1,6 @@
 <div class="ui middle aligned selection divided list">
-  <app-book-list-item *ngFor="let book of books" [book]="book" class="item" [routerLink]="book.isbn"></app-book-list-item>
+  <app-book-list-item *ngFor="let book of books" [book]="book" class="item"
+                      [routerLink]="book.isbn"></app-book-list-item>
+  <div *ngIf="!books" class="ui active dimmer text loader">Daten werden geladen</div>
+  <div *ngIf="books && !books.length">Es wurden noch keine Bücher eingetragen</div>
 </div>
